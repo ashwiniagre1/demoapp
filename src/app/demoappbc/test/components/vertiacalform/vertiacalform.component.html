@@ -1,0 +1,40 @@
+<amexio-row>
+    <amexio-column size="12">
+        <amexio-card [footer]="true" [header]="true" [show]="true" [header-align]="'left'" [footer-align]="'right'">
+            <amexio-header>
+                Vertical Form
+            </amexio-header>
+            <amexio-body>
+                <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="vertiacalform.FirstTextInput" name="vertiacalform.FirstTextInput" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true">
+                </amexio-text-input>
+                <amexio-email-input [field-label]="'Email Input'" [(ngModel)]="vertiacalform.EmailId" name="vertiacalform.EmailId" [place-holder]="'example@gmail.com'" [allow-blank]="true" [has-label]="true" [icon-feedback]="true">
+                </amexio-email-input>
+                <amexio-text-input [field-label]="'Text Input'" [(ngModel)]="vertiacalform.SecondTextInput" name="vertiacalform.SecondTextInput" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true">
+                </amexio-text-input>
+                <amexio-password-input [field-label]="'Password'" [(ngModel)]="vertiacalform.Password" name="vertiacalform.Password" [place-holder]="'Enter Password'" [allow-blank]="true" [min-length]="0" [max-length]="20" [has-label]="true" [icon-feedback]="true">
+                </amexio-password-input>
+                <amexio-number-input [field-label]="'Number Input'" [(ngModel)]="vertiacalform.NumberInput" name="vertiacalform.NumberInput" [allow-blank]="true" [has-label]="true" [icon-feedback]="true" [min-value]="0" [max-value]="20">
+                </amexio-number-input>
+                <amexio-checkbox [field-label]="'checkbox'" [(ngModel)]="vertiacalform.CheckBox" name="vertiacalform.CheckBox" [required]="true">
+                </amexio-checkbox>
+
+            </amexio-body>
+
+            <amexio-action>
+                <amexio-button [label]="'Submit'" [type]="'success'" [tooltip]="'Submit'" [size]="'default'" [form-bind]="'SubmitBtn'">
+                </amexio-button>
+
+            </amexio-action>
+        </amexio-card>
+    </amexio-column>
+</amexio-row>
+
+<amexio-notification [data]="successMsgData" [vertical-position]="'top'" [horizontal-position]="'right'" [close-on-escape]="true" [background-color]="'green'" [auto-dismiss-msg]="true" [auto-dismiss-msg-interval]="4000">
+    <ng-template #amexioNotificationTemplates let-row="row">
+        <amexio-box>
+            <amexio-image [icon-class]="'fa fa-check'">
+            </amexio-image> &nbsp;&nbsp;
+            <amexio-label size="small-bold" font-color="black">{{row}}</amexio-label>
+        </amexio-box>
+    </ng-template>
+</amexio-notification>
